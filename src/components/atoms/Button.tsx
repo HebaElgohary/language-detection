@@ -12,6 +12,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
   center?: boolean;
   isRounded?: boolean;
+  active?: boolean;
 }
 
 const Button = ({
@@ -19,6 +20,7 @@ const Button = ({
   variant = "primary",
   tag = "button",
   href = "",
+  active = false,
   size = "lg",
   disabled = false,
   loading = false,
@@ -56,13 +58,16 @@ const Button = ({
         <Link
           href={href}
           className={cn(
+
             baseClasses,
             variants[variant],
             sizes[size],
             fullWidth && "w-full",
             isRounded ? "rounded-full" : "rounded-md",
-            className,
             center ? "text-center" : "",
+            active && "ds-bg-primary ds-text-white",
+            className,
+
           )}
         >
           {children}
@@ -77,6 +82,8 @@ const Button = ({
             baseClasses,
             variants[variant],
             sizes[size],
+            active ? "ds-bg-primary ds-text-white" : "",
+
             fullWidth && "w-full",
             isRounded ? "rounded-full" : "rounded-md",
             className,

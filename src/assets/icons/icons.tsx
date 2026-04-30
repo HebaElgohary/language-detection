@@ -1,2 +1,2 @@
-import { Moon, Sun,EarthIcon } from 'lucide-react';
-export { Moon, Sun,EarthIcon };
+import { Moon, Sun,Globe } from 'lucide-react';
+export { Moon, Sun,Globe };
