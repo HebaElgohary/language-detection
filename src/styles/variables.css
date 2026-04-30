@@ -1,0 +1,112 @@
+/* -------------------------------------------------- */
+/*  Design System - Used Globally Across the Project  */
+/* -------------------------------------------------- */
+
+@layer theme {
+  :root {
+    /* Brand Colors */
+    --color-primary: #00b7c1;
+    --color-primary-200: #dbf8fa;
+    --color-primary-300: #d6f2f5;
+    --color-secondary: #ffa630;
+
+    /* UI Backgrounds */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f9f9fb;
+    --color-bg-form: #eff0f3;
+
+    /* Text Colors */
+    --color-text-primary: #1e1f24;
+    --color-text-alt: var(--color-primary);
+    --color-text-secondary: #62636c;
+    --color-text-disabled: #80828d;
+    --color-text-white: var(--color-bg);
+
+     /* UI dark Backgrounds */
+    --color-bg-dark: #000000;
+    --color-bg-alt-dark: #1E2021;
+    --color-bg-form-dark: #222325;
+
+    /* Text dark Colors */
+    --color-text-primary-dark: #EEEEF0;
+    --color-text-secondary-dark: #B2B3BD;
+    --color-text-disabled-dark: #A2A4B0;
+
+    /* Shadows */
+    --shadow-sm: 0 2 4px rgba(0, 0, 8, 0.08);
+    --shadow-md: 0 4 8px rgba(0, 0, 8, 0.08);
+    --shadow-lg: 0 8 16px rgba(0, 0, 8, 0.01);
+
+    /* Typography */
+    --font-sans: "Inter", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+    --text-xs:0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --font-regular: 400;
+    --font-bold: 700;
+
+    /* Line Heights */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.75;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 20px;
+    --space-xl: 24px;
+    --space-2xl: 28px;
+    --space-3xl: 32px;
+    --space-4xl: 36px;
+
+    /* Borders */
+    --border-width-sm: 1px;
+    --border-width-md: 2px;
+    --border-color: var(--color-primary);
+    --border-color-muted: var(--color-text-secondary);
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-3xl: 24px;
+    --radius-4xl: 28px;
+
+    /* Interaction States */
+    --state-hover-opacity: 0.9;
+    --state-active-opacity: 0.8;
+    --state-disabled-opacity: 0.5;
+
+    /* Opacity */
+    --opacity-disabled: 0.5;
+    --opacity-muted: 0.7;
+
+    /* Focus */
+    --focus-ring-color: var(--color-primary);
+    --focus-ring-width: 2px;
+
+    /* Motion */
+    --motion-fast: 150ms;
+    --motion-normal: 300ms;
+    --ease-out: ease-out;
+  }
+  .dark{
+  
+
+    /* UI Backgrounds */
+    --color-bg:var(--color-bg-dark);
+    --color-bg-alt: var(--color-bg-alt-dark);
+    --color-bg-form: var(--color-bg-form-dark);
+ 
+    --color-text-primary: var(--color-text-primary-dark);
+    --color-text-secondary: var(--color-text-secondary-dark);
+
+    --color-text-disabled: var(--color-text-disabled-dark);
+  }
+}
