@@ -1,22 +1,35 @@
-import React from 'react'
-import Title from '../atoms/Title'
-import Text from '../atoms/Text'
-import TextArea from '../atoms/TextArea'
-import Button from '../atoms/Button'
-import { useTranslations } from "next-intl";
+import React from "react";
+import Title from "../atoms/Title";
+import Text from "../atoms/Text";
+import TextArea from "../atoms/TextArea";
+import Button from "../atoms/Button";
+import { Locale, useLocale, useTranslations } from "next-intl";
+import { title } from "process";
 
 export default function DetectLanguageBox() {
-    // const {}=useTranslations()
+  const locale:Locale = useLocale();
+    console.log('locale isssssss',locale)
+
+  const t = useTranslations('detectLangBox');
   return (
-    <div className='md:text-center flex flex-col gap-7'>
-          <Title className="ds-text-primary-300 font-semibold md:text-center !text-[19px] md:!text-3xl">
-          Detect the Language instantly{" "}
-        </Title>
-        <Text variant='disabled' className='text-center  !text-[14px]'>Type any sentence and we'll identify its language</Text>
-        <div className='flex flex-col gap-3 '>
-        <TextArea placeholder='Type any sentence'className='md:w-150 md:h-40 h-30 w-full ' />
-        <Button className='text-sm md:w-70 w-full'variant='primary'>Detect Language</Button>
+    <div className="md:text-center flex flex-col gap-7">
+      <Title className="ds-text-primary-300 font-semibold md:text-center !text-[19px] md:!text-3xl">
+      {t('title')}
+      </Title>
+      <Text variant="disabled" className="text-center !text-[14px]">
+      {t('text')}
+       
+      </Text>
+      <div className="flex flex-col gap-3 ">
+        <TextArea
+          placeholder={t('placeholder')}
+          className="md:w-150 md:h-40 h-30 w-full "
+        />
+        <Button className="text-sm md:w-70 w-full" variant="primary">
+      {t('btn')}
+          
+        </Button>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
