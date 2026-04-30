@@ -11,8 +11,10 @@ export default function DetectLanguageBox() {
           Detect the Language instantly{" "}
         </Title>
         <Text variant='disabled'>Type any sentence and we'll identify its language</Text>
-        <TextArea placeholder='Type any sentence'className='md:w-150 md:h-40 h-30 ' />
-        <Button className='text-sm md:w-70'variant='primary'>Detect Language</Button>
+        <div className='flex flex-col gap-3 '>
+        <TextArea placeholder='Type any sentence'className='md:w-150 md:h-40 h-30 w-full ' />
+        <Button className='text-sm md:w-70 w-full'variant='primary'>Detect Language</Button>
+    </div>
     </div>
   )
 }
