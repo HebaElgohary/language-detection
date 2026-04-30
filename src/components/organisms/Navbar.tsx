@@ -4,9 +4,14 @@ import { Globe } from "@/assets/icons/icons";
 import Button from "../atoms/Button";
 import { Globe2 } from "lucide-react";
 import Icon from '@/components/atoms/Icon'
+import { Locale, useLocale } from "next-intl";
+import { changeLocaleAction } from "@/i18n/locale";
 
 export default function Navbar() {
-  const [locale, setLocale] = useState("en");
+  const locale:Locale= useLocale();
+  const nextLocale=locale==='en'?'en':'ar'
+      console.log('locale isssssss',locale)
+  
   return (
     <div className=" bg-white flex justify-between items-center ds-text-primary !p-3 md:!p-8 md:!px-21">
       {/* first section */}
@@ -25,8 +30,8 @@ export default function Navbar() {
             <Button
               className="!px-2 md:!px-3 !py-1  rounded-2xl"
               variant="ghost"
-              active={locale == "en"}
-              onClick={() => setLocale("en")}
+              active={nextLocale == "en"}
+              onClick={() =>   changeLocaleAction('en')}
               size="sm"
             >
               EN
@@ -37,8 +42,8 @@ export default function Navbar() {
               size="sm"
               className="!px-2 md:!px-3 !py-1  rounded-2xl"
               variant="ghost"
-              active={locale == "ar"}
-              onClick={() => setLocale("ar")}
+              active={nextLocale == "ar"}
+              onClick={() =>   changeLocaleAction('ar')}
             >
               AR
             </Button>
