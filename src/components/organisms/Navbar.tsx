@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Globe } from "@/assets/icons/icons";
 import Button from "../atoms/Button";
+import { Globe2 } from "lucide-react";
+import Icon from '@/components/atoms/Icon'
 
 export default function Navbar() {
   const [locale, setLocale] = useState("en");
@@ -11,14 +13,14 @@ export default function Navbar() {
       <div className="flex flex-row gap-3 items-center  ">
         <span>
           {" "}
-          <Globe />
+          <Icon Icon={Globe} size={20} color="primary-300"/>
         </span>
         <span>Language Detect</span>
       </div>
       {/* //////////////////// */}
       {/* second section */}
       <div className="flex flex-col md:flex-row gap-2  items-center">
-        <div className="flex gap-2 border-1 !p-1 rounded-3xl">
+        <div className="flex gap-2 border-1 !p-1 rounded-3xl  ">
           <span>
             <Button
               className="!px-2 md:!px-3 !py-1  rounded-2xl"

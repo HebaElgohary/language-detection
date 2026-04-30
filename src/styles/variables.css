@@ -6,8 +6,8 @@
   :root {
     /* Brand Colors */
     --color-primary: #4706df;
-    --color-primary-200: #9d7cea;
-    --color-primary-300: #5827ca;
+    --color-primary-200: #a98dea;
+    --color-primary-300: #7342e4;
     --color-secondary: #bb0707;
     --color-secondary-200: #bd5555;
     --color-secondary-300:rgb(184, 52, 52)7;
@@ -29,8 +29,8 @@
     --color-text-secondary-200: var(--color-secondary-200);
     --color-text-secondary-300: var(--color-secondary-300);
 
-    --color-text-disabled: #80828d;
-    --color-text-white: var(--color-bg);
+    --color-text-disabled: #404041;
+    --color-text-white: #ffffff;
 
      /* UI dark Backgrounds */
     --color-bg-dark: #000000;

@@ -6,7 +6,9 @@ export default function PublicLayout({children}:{children:ReactNode}) {
   return (
     <div>
         <Navbar />
+        <div className='ds-container '>
         {children}
+        </div>
         <Footer />
     </div>
   )

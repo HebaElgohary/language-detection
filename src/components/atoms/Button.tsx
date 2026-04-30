@@ -37,19 +37,19 @@ const Button = ({
 
   const variants = {
     primary:
-      "ds-bg-primary text-white capitalize focus:ring-blue-500 cursor-pointer hover:opacity-95",
+      "ds-bg-primary ds-text-white capitalize focus:ring-blue-500 cursor-pointer hover:opacity-95",
     secondary:
-      "border-2 border-skill text-white capitalize hover:opacity-95 cursor-pointer",
+      "border-2 border-skill ds-text-white capitalize hover:opacity-95 cursor-pointer",
     ghost: "ds-text-primary capitalize cursor-pointer",
     outline1:
       "border-2 ds-text-alt  capitalize focus:ring-primary-500 cursor-pointer",
   };
 
   const sizes = {
-    sm: "px-3 py-1.5 text-sm",
-    md: "px-5 py-[8px] text-[16px]",
-    lg: "px-6 py-3 text-[20px]",
-    xl: "px-8 py-4 text-lg",
+    sm: "!px-3 !py-1.5 text-sm",
+    md: "!px-5 !py-[8px] text-[16px]",
+    lg: "!px-6 !py-3 text-[20px]",
+    xl: "!px-8 !py-4 text-lg",
   };
 
   return (
