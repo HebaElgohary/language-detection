@@ -5,20 +5,30 @@
 @layer theme {
   :root {
     /* Brand Colors */
-    --color-primary: #00b7c1;
-    --color-primary-200: #dbf8fa;
-    --color-primary-300: #d6f2f5;
-    --color-secondary: #ffa630;
+    --color-primary: #4706df;
+    --color-primary-200: #9d7cea;
+    --color-primary-300: #5827ca;
+    --color-secondary: #bb0707;
+    --color-secondary-200: #bd5555;
+    --color-secondary-300:rgb(184, 52, 52)7;
+
 
     /* UI Backgrounds */
-    --color-bg: #ffffff;
+    --color-bg: #f5efef;
     --color-bg-alt: #f9f9fb;
     --color-bg-form: #eff0f3;
 
     /* Text Colors */
-    --color-text-primary: #1e1f24;
-    --color-text-alt: var(--color-primary);
-    --color-text-secondary: #62636c;
+    --color-text-alt: #1e1f24;
+    --color-text-primary: var(--color-primary);
+    --color-text-primary-200: var(--color-primary-200);
+    --color-text-primary-300: var(--color-primary-300);
+
+
+    --color-text-secondary: var(--color-secondary);
+    --color-text-secondary-200: var(--color-secondary-200);
+    --color-text-secondary-300: var(--color-secondary-300);
+
     --color-text-disabled: #80828d;
     --color-text-white: var(--color-bg);
 

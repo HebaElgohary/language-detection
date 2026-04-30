@@ -1,8 +1,11 @@
+import PublicLayout from "@/components/layout/PublicLayout";
 
 export default function page() {
   return (
     <div>
-      home
+      <PublicLayout >
+        home
+      </PublicLayout>
     </div>
   );
 }

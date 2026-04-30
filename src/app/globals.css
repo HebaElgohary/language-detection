@@ -8,7 +8,7 @@
   html {
     font-family: var(--font-sans);
     color: var(--color-text-primary);
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg-form);
     scroll-behavior: smooth;
   }
   *,
@@ -49,6 +49,9 @@
   /* ================= COLORS ================= */
   .ds-text-primary {
     color: var(--color-text-primary);
+  }
+  .ds-text-primary-200 {
+    color: var(--color-text-primary-200);
   }
   .ds-text-alt {
     color: var(--color-text-alt);
