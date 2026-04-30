@@ -6,11 +6,11 @@ import Button from '../atoms/Button'
 
 export default function DetectLanguageBox() {
   return (
-    <div className='text-center flex flex-col gap-7'>
-          <Title className="ds-text-primary-300 font-semibold text-center !text-md md:!text-3xl">
+    <div className='md:text-center flex flex-col gap-7'>
+          <Title className="ds-text-primary-300 font-semibold md:text-center !text-[19px] md:!text-3xl">
           Detect the Language instantly{" "}
         </Title>
-        <Text variant='disabled'>Type any sentence and we'll identify its language</Text>
+        <Text variant='disabled' className='text-center !text-[14px]'>Type any sentence and we'll identify its language</Text>
         <div className='flex flex-col gap-3 '>
         <TextArea placeholder='Type any sentence'className='md:w-150 md:h-40 h-30 w-full ' />
         <Button className='text-sm md:w-70 w-full'variant='primary'>Detect Language</Button>
