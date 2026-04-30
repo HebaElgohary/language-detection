@@ -3,8 +3,10 @@ import Title from '../atoms/Title'
 import Text from '../atoms/Text'
 import TextArea from '../atoms/TextArea'
 import Button from '../atoms/Button'
+import { useTranslations } from "next-intl";
 
 export default function DetectLanguageBox() {
+    // const {}=useTranslations()
   return (
     <div className='md:text-center flex flex-col gap-7'>
           <Title className="ds-text-primary-300 font-semibold md:text-center !text-[19px] md:!text-3xl">
