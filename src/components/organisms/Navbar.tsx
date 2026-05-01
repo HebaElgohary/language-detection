@@ -15,10 +15,10 @@ export default function Navbar() {
   return (
     <div className=" bg-white flex justify-between items-center ds-text-primary !p-3 md:!p-8 md:!px-21">
       {/* first section */}
-      <div className="flex flex-row gap-3 items-center  ">
+      <div className="flex flex-row gap-3 items-center text-md md:text-xl ">
         <span>
           {" "}
-          <Icon Icon={Globe} size={20} color="primary-300"/>
+          <Icon Icon={Globe} size={30} color="primary-300"/>
         </span>
         <span>Language Detect</span>
       </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
           size="sm"
           className="border-1 border-primary hidden md:block  rounded-md !px-3 !p-1 "
         >
-          starts
+          stats
         </Button>
       </div>
       {/* ///////////////// */}
