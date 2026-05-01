@@ -5,9 +5,11 @@ import TextArea from "../atoms/TextArea";
 import Button from "../atoms/Button";
 import { Locale, useLocale, useTranslations } from "next-intl";
 import { useDetect } from "@/hooks/useDetect";
+import { useState } from "react";
 
 export default function DetectLanguageBox() {
   const locale:Locale = useLocale();
+  const [text, setText] = useState('');
   const { detect,loading,error,data } = useDetect();
     console.log('locale isssssss',locale)
 
@@ -22,22 +24,26 @@ export default function DetectLanguageBox() {
        
       </Text> 
       <div className="flex flex-col gap-3 ">
-        <TextArea
-          placeholder={t('placeholder')}
-          className="md:w-150 md:h-40 h-30 w-full "
-        />
-        <Button onClick={() => 
-          
-          { 
-detect('hello world')
-console.log('data isssssss',data)
-console.log('loading isssssss',loading)
-console.log('error isssssss',error)
+      <TextArea
+  value={text}
+  onChange={(e) => setText(e.target.value)}
+  placeholder={t('placeholder')}
+  className="md:w-150 md:h-40 h-30 w-full "
+/>
+      <Button
+  onClick={() => {
+    console.log('text isssssss', text);
+    detect(text);
 
-          }} className="text-sm md:w-70 w-full" variant="primary">
-      {t('btn')}
-          
-        </Button>
+    console.log('data isssssss', data);
+    console.log('loading isssssss', loading);
+    console.log('error isssssss', error);
+  }}
+  className="text-sm md:w-70 w-full"
+  variant="primary"
+>
+  {t('btn')}
+</Button>
       </div>
     </div>
   );
