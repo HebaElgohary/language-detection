@@ -9,7 +9,7 @@ export default function PublicLayout({children}:{children:ReactNode}) {
         <div className='ds-container '>
         {children}
         </div>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }
