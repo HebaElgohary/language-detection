@@ -8,10 +8,10 @@ export default function page() {
   return (
     <div>
       <PublicLayout >
-        <div className="flex-col">
+        {/* <div className="flex-col"> */}
       <DetectLanguageBox />
       <TopLanguage/>
-        </div>
+        {/* </div> */}
       <ErrorCard />
       </PublicLayout>
     </div>
