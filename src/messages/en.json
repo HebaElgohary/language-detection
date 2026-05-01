@@ -13,6 +13,13 @@
         "p":" Language is a structured communication system consisting of five core components  phonology (sounds), morphology (word formation), syntax (grammar), semantics (meaning), and pragmatics (context) [1, 2, 3] ",
         "CP":" [ chart placeholder ]"
         
+    },
+    "errorCard":{
+        "p":"Unable to detect language"
+    },
+    "langCard": {
+        "title":"Detected language",
+        "lang":"English"
     }
-    
+
 }
