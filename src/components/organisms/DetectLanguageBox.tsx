@@ -20,10 +20,10 @@ export default function DetectLanguageBox() {
       {t('text')}
        
       </Text>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 ">
         <TextArea
           placeholder={t('placeholder')}
-          className="md:w-210 md:h-40 h-30 w-full "
+          className="md:w-150 md:h-40 h-30 w-full "
         />
         <Button className="text-sm md:w-70 w-full" variant="primary">
       {t('btn')}
