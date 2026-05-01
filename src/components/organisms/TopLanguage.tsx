@@ -1,20 +1,15 @@
 import React from "react";
 import {  useTranslations } from "next-intl";
 
-export default function TopLanguage() {
 
+
+export default function TopLanguage() {
   const t = useTranslations('TopLanguage');
-  return (
-    <div className="px-35">
-      <div className="flex justify-between mt-7 mb-4">
-        <h2 className="font-bold text-2xl">{t('title')}</h2>
-        <svg
 
-export default function TopLanguage() {
   return (
     <div>
       <div className="flex   !mx-22 justify-between !my-22 !mb-11">
-        <h2 className="font-bold text-2xl text-center">Top Languages</h2>
+        <h2 className="font-bold text-2xl text-center">{t('title')}</h2>
         <svg
         className="hidden md:block"
           width="16"
@@ -36,7 +31,7 @@ export default function TopLanguage() {
       <div className="flex flex-col md:flex-row justify-center !mx-auto  gap-3 ">
         <div className="!mb-5 border-dotted border border-black bg-white !p-5 rounded-2xl">
           <div className="flex justify-between !mb-2">
-            <h3>English</h3>
+            <h3>{t('eng')}</h3>
             <h3>60 %</h3>
           </div>
           <svg
@@ -68,7 +63,7 @@ export default function TopLanguage() {
         </div>
         <div className="!mb-5 border-dotted border border-black bg-white !p-5 rounded-2xl">
           <div className="flex justify-between !mb-2">
-            <h3>Arabic</h3>
+            <h3>{t('ar')}</h3>
             <h3>25 %</h3>
           </div>
           <svg
@@ -100,7 +95,7 @@ export default function TopLanguage() {
         </div>
         <div className="!mb-5 border-dotted border border-gray-600 bg-white !p-5 rounded-2xl">
           <div className="flex justify-between mb-2">
-            <h3>French</h3>
+            <h3>{t('fr')}</h3>
             <h3>15 %</h3>
           </div>
           <svg
@@ -148,8 +143,8 @@ export default function TopLanguage() {
 
         </div>
         <div className="!max-w-xl !p-5 ">
-            <p>Language is a structured communication system consisting of five core components: phonology (sounds), morphology (word formation), syntax (grammar), semantics (meaning), and pragmatics (context) [1, 2, 3]</p>
-            <p className="!pt-2">[ chart placeholder ]</p>
+            <p>{t('p')}</p>
+            <p className="!pt-2">{t('cp')}</p>
         </div>
       </div>
     </div>
