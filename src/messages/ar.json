@@ -1,8 +1,17 @@
 {
     "detectLangBox":{
-        "title":"Detect the Language instantly",
-        "text":"Type any sentence and we'll identify its language",
-        "placeholder":"Type any sentence",
-        "btn":"Detect Language"
+        "title":"اكتشف اللغة فورًا",
+        "text":"اكتب أي جملة وسنقوم بتحديد لغتها",
+        "placeholder":"اكتب أي جملة",
+        "btn":"اكتشف اللغة"
+    },
+    "TopLanguage":{
+        "eng":"الإنجليزية",
+        "ar":"العربية",
+        "fr":"الفرنسية",
+        "title":"أهم اللغات",
+        "p":"اللغة هي نظام تواصل منظم يتكون من خمسة مكونات أساسية: علم الأصوات (phonology)، علم الصرف (morphology)، النحو (syntax)، الدلالة (semantics)، والتداولية (pragmatics) [1, 2, 3]",
+        "CP":"[ مكان مخصص للرسم البياني ]"
+        
     }
 }

@@ -1,3 +1,14 @@
+import React from "react";
+import {  useTranslations } from "next-intl";
+
+export default function TopLanguage() {
+
+  const t = useTranslations('TopLanguage');
+  return (
+    <div className="px-35">
+      <div className="flex justify-between mt-7 mb-4">
+        <h2 className="font-bold text-2xl">{t('title')}</h2>
+        <svg
 
 export default function TopLanguage() {
   return (

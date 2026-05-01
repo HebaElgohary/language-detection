@@ -9,7 +9,7 @@ export default function PublicLayout({children}:{children:ReactNode}) {
         <div className='ds-container flex-col min-h-screen '>
         {children}
         </div>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }
