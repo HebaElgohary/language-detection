@@ -37,6 +37,11 @@
   .ds-bg-secondary {
     background-color: var(--color-secondary);
   }
+   .ds-bg-secondary-200 {
+    background-color: var(--color-secondary-200);
+  } .ds-bg-secondary-300 {
+    background-color: var(--color-secondary-300);
+  }
   .ds-bg {
     background-color: var(--color-bg);
   }

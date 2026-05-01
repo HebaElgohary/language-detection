@@ -1,0 +1,17 @@
+{
+    "detectLangBox":{
+        "title":"Detect the Language instantly",
+        "text":"Type any sentence and we'll identify its language",
+        "placeholder":"Type any sentence",
+        "btn":"Detect Language"
+    },
+    "TopLanguage":{
+        "eng":"English",
+        "ar":"Aabic",
+        "fr":"french",
+        "title":"Top Language",
+        "p":" Language is a structured communication system consisting of five core components  phonology (sounds), morphology (word formation), syntax (grammar), semantics (meaning), and pragmatics (context) [1, 2, 3] ",
+        "CP":" [ chart placeholder ]"
+        
+    }
+}
