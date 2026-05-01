@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Globe } from "@/assets/icons/icons";
 import Button from "../atoms/Button";
 import Icon from '@/components/atoms/Icon'
-import { Locale, useLocale } from "next-intl";
+import { Locale, useLocale, useTranslations } from "next-intl";
 import { changeLocaleAction } from "@/i18n/locale";
 
 export default function Navbar() {
@@ -14,8 +14,8 @@ export default function Navbar() {
     document.documentElement.setAttribute("lang", locale);
   }, [locale]);
 
-    const nextLocale = locale === "en" ? "ar" : "en";
-
+    const nextLocale = locale === "en" ? "en" : "ar";
+const t=useTranslations('nav')
   return (
     <div className=" bg-white flex justify-between items-center ds-text-primary !p-3 md:!p-8 md:!px-21">
       {/* first section */}
@@ -24,7 +24,7 @@ export default function Navbar() {
           {" "}
           <Icon Icon={Globe} size={30} color="primary-300"/>
         </span>
-        <span>Language Detect</span>
+        <span>{t('h')}</span>
       </div>
       {/* //////////////////// */}
       {/* second section */}

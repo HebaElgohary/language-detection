@@ -3,8 +3,9 @@ import {  useTranslations } from "next-intl";
 
 
 
-export default function TopLanguage() {
+export default function TopLanguage({data,loading}:any) {
   const t = useTranslations('TopLanguage');
+    if(loading) return <div className="text-center mt-5">{t('loading')}</div>
 
   return (
     <div>
@@ -31,7 +32,7 @@ export default function TopLanguage() {
       <div className="flex flex-col md:flex-row justify-center !mx-auto  gap-3 ">
         <div className="!mb-5 border-dotted border border-black bg-white !p-5 rounded-2xl">
           <div className="flex justify-between !mb-2">
-            <h3>{t('eng')}</h3>
+            <h3>{data?.language || t('eng')}</h3>
             <h3>60 %</h3>
           </div>
           <svg

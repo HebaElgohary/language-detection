@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import Title from "../atoms/Title";
 import Text from "../atoms/Text";
 import TextArea from "../atoms/TextArea";
@@ -7,43 +8,63 @@ import { Locale, useLocale, useTranslations } from "next-intl";
 import { useDetect } from "@/hooks/useDetect";
 import { useState } from "react";
 
-export default function DetectLanguageBox() {
-  const locale:Locale = useLocale();
-  const [text, setText] = useState('');
-  const { detect,loading,error,data } = useDetect();
-    console.log('locale isssssss',locale)
+type Props = {
+  setResult: (data: any) => void;
+  setError: (error: any) => void;
+  setLoading: (loading: boolean) => void;
+};
 
-  const t = useTranslations('detectLangBox');
+export default function DetectLanguageBox({
+  setResult,
+  setError,
+  setLoading,
+}: Props) {
+  const locale: Locale = useLocale();
+  const [text, setText] = useState("");
+  const { detect } = useDetect();
+
+  const t = useTranslations("detectLangBox");
+
   return (
     <div className="md:text-center flex flex-col gap-7">
       <Title className="ds-text-primary-300 font-semibold md:text-center !text-[19px] md:!text-3xl">
-      {t('title')}
+        {t("title")}
       </Title>
-      <Text variant="disabled" className="text-center !text-[14px]">
-      {t('text')}
-       
-      </Text> 
-      <div className="flex flex-col gap-3 ">
-      <TextArea
-  value={text}
-  onChange={(e) => setText(e.target.value)}
-  placeholder={t('placeholder')}
-  className="md:w-150 md:h-40 h-30 w-full "
-/>
-      <Button
-  onClick={() => {
-    console.log('text isssssss', text);
-    detect(text);
 
-    console.log('data isssssss', data);
-    console.log('loading isssssss', loading);
-    console.log('error isssssss', error);
-  }}
-  className="text-sm md:w-70 w-full"
-  variant="primary"
->
-  {t('btn')}
-</Button>
+      <Text variant="disabled" className="text-center !text-[14px]">
+        {t("text")}
+      </Text>
+
+      <div className="flex flex-col gap-3">
+        <TextArea
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder={t("placeholder")}
+          className="md:w-150 md:h-40 h-30 w-full"
+        />
+
+        <Button
+          disabled={!text.trim()}
+          onClick={async () => {
+            try {
+              setLoading(true);
+
+              const res = await detect(text);
+
+              setResult(res);
+              setError(null);
+            } catch (err) {
+              setError(err);
+              setResult(null);
+            } finally {
+              setLoading(false);
+            }
+          }}
+          className="text-sm md:w-70 w-full"
+          variant="primary"
+        >
+          {t("btn")}
+        </Button>
       </div>
     </div>
   );
