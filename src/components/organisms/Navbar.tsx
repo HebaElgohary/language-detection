@@ -1,17 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useEffect } from "react";
 import { Globe } from "@/assets/icons/icons";
 import Button from "../atoms/Button";
-import { Globe2 } from "lucide-react";
 import Icon from '@/components/atoms/Icon'
 import { Locale, useLocale } from "next-intl";
 import { changeLocaleAction } from "@/i18n/locale";
 
 export default function Navbar() {
-  const locale:Locale= useLocale();
-  const nextLocale=locale==='en'?'en':'ar'
-      console.log('locale isssssss',locale)
-  
+ const locale: Locale = useLocale();
+    useEffect(() => {
+    const dir = locale === "ar" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", dir);
+    document.documentElement.setAttribute("lang", locale);
+  }, [locale]);
+
+    const nextLocale = locale === "en" ? "ar" : "en";
+
   return (
     <div className=" bg-white flex justify-between items-center ds-text-primary !p-3 md:!p-8 md:!px-21">
       {/* first section */}

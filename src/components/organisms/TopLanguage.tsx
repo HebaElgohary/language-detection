@@ -144,7 +144,7 @@ export default function TopLanguage() {
         </div>
         <div className="!max-w-xl !p-5 ">
             <p>{t('p')}</p>
-            <p className="!pt-2">{t('cp')}</p>
+            <p className="!pt-2">{t('CP')}</p>
         </div>
       </div>
     </div>

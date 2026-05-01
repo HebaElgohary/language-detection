@@ -1,4 +1,8 @@
 {
+    "nav":{
+            "h":"Language Detect"
+         
+    },
     "detectLangBox":{
         "title":"Detect the Language instantly",
         "text":"Type any sentence and we'll identify its language",
