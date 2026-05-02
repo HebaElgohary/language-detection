@@ -3,7 +3,7 @@ import {  useTranslations } from "next-intl";
 
 
 
-export default function TopLanguage({data,loading}:any) {
+export default function TopLanguage({probabilities,loading}:any) {
   const t = useTranslations('TopLanguage');
     if(loading) return <div className="text-center mt-5">{t('loading')}</div>
 
@@ -30,10 +30,11 @@ export default function TopLanguage({data,loading}:any) {
       </div>
 
       <div className="flex flex-col md:flex-row justify-center !mx-auto  gap-3 ">
-        <div className="!mb-5 border-dotted border border-black bg-white !p-5 rounded-2xl">
+       {probabilities.map((item: any) =>
+         <div key={item.language} className="!mb-5 border-dotted border border-black bg-white !p-5 rounded-2xl">
           <div className="flex justify-between !mb-2">
-            <h3>{data?.language || t('eng')}</h3>
-            <h3>60 %</h3>
+            <h3>{item.language || t('eng')}</h3>
+            <h3>{item.confidence || 60} %</h3>
           </div>
           <svg
             width="198"
@@ -62,70 +63,7 @@ export default function TopLanguage({data,loading}:any) {
             </defs>
           </svg>
         </div>
-        <div className="!mb-5 border-dotted border border-black bg-white !p-5 rounded-2xl">
-          <div className="flex justify-between !mb-2">
-            <h3>{t('ar')}</h3>
-            <h3>25 %</h3>
-          </div>
-          <svg
-            width="198"
-            height="8"
-            viewBox="0 0 198 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_11_155)">
-              <path
-                d="M0 3.99255C0 1.78753 1.78753 0 3.99255 0H193.68C195.885 0 197.673 1.78753 197.673 3.99255C197.673 6.19758 195.885 7.98511 193.68 7.98511H3.99256C1.78753 7.98511 0 6.19758 0 3.99255Z"
-                fill="#E5E5E5"
-              />
-              <path
-                d="M0 3.99255C0 1.78753 1.78753 0 3.99255 0H45.4118C47.6169 0 49.4044 1.78753 49.4044 3.99255C49.4044 6.19758 47.6169 7.98511 45.4118 7.98511H3.99255C1.78753 7.98511 0 6.19758 0 3.99255Z"
-                fill="#4F46E5"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_11_155">
-                <path
-                  d="M0 3.99255C0 1.78753 1.78753 0 3.99255 0H193.68C195.885 0 197.673 1.78753 197.673 3.99255C197.673 6.19758 195.885 7.98511 193.68 7.98511H3.99256C1.78753 7.98511 0 6.19758 0 3.99255Z"
-                  fill="white"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
-        <div className="!mb-5 border-dotted border border-gray-600 bg-white !p-5 rounded-2xl">
-          <div className="flex justify-between mb-2">
-            <h3>{t('fr')}</h3>
-            <h3>15 %</h3>
-          </div>
-          <svg
-            width="198"
-            height="8"
-            viewBox="0 0 198 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_11_163)">
-              <path
-                d="M0 3.99255C0 1.78753 1.78753 0 3.99255 0H193.68C195.885 0 197.673 1.78753 197.673 3.99255C197.673 6.19758 195.885 7.98511 193.68 7.98511H3.99256C1.78753 7.98511 0 6.19758 0 3.99255Z"
-                fill="#E5E5E5"
-              />
-              <path
-                d="M0 3.99255C0 1.78753 1.78753 0 3.99255 0H25.6427C27.8477 0 29.6353 1.78753 29.6353 3.99255C29.6353 6.19758 27.8477 7.98511 25.6427 7.98511H3.99256C1.78753 7.98511 0 6.19758 0 3.99255Z"
-                fill="#4F46E5"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_11_163">
-                <path
-                  d="M0 3.99255C0 1.78753 1.78753 0 3.99255 0H193.68C195.885 0 197.673 1.78753 197.673 3.99255C197.673 6.19758 195.885 7.98511 193.68 7.98511H3.99256C1.78753 7.98511 0 6.19758 0 3.99255Z"
-                  fill="white"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
+)}
       </div>
 
       <div className="flex flex-col md:flex-row !mx-auto lg:w-200 w-full justify-between items-center border-dotted border border-gray-600 bg-white !p-2 rounded-2xl !mb-44 gap-2">

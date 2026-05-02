@@ -24,14 +24,14 @@ console.log('error issssssssssssssssssssssss', error)
         setLoading={setLoading}
         error={error?error:'null'}
       />
-{result &&
-     (  
+{/* {result && */}
+     {/* (   */}
      <div className="flex justify-center mt-10 flex-col">
      <FlagCard lang={result?.language || 'arabic'} code={result?.code || 'EG'} />  
-     <TopLanguage data={result} loading={loading} />
+     <TopLanguage probabilities={result?.probabilities||[{language:'arabic',confidence:70},{language:'english',confidence:20}]} loading={loading} />
      
      </div>)
-     }
+     {/* } */}
 
 
 {/* {error && 
