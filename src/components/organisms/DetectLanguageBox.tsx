@@ -12,12 +12,14 @@ type Props = {
   setResult: (data: any) => void;
   setError: (error: any) => void;
   setLoading: (loading: boolean) => void;
+  error?:any
 };
 
 export default function DetectLanguageBox({
   setResult,
   setError,
   setLoading,
+  error
 }: Props) {
   const locale: Locale = useLocale();
   const [text, setText] = useState("");
@@ -38,7 +40,7 @@ export default function DetectLanguageBox({
       <div className="flex flex-col gap-3">
         <TextArea
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setText(e.target.value)}
           placeholder={t("placeholder")}
           className="md:w-150 md:h-40 h-30 w-full"
         />
@@ -61,7 +63,7 @@ export default function DetectLanguageBox({
             }
           }}
           className="text-sm md:w-70 w-full"
-          variant="primary"
+          variant={error ? 'secondary' : 'primary'}
         >
           {t("btn")}
         </Button>

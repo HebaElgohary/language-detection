@@ -7,32 +7,36 @@ import FlagCard from "@/components/molecules/FlagCard";
 import DetectLanguageBox from "@/components/organisms/DetectLanguageBox";
 import TopLanguage from "@/components/organisms/TopLanguage";
 import { useState } from "react";
+import ReactCountryFlag from "react-country-flag";
 
 export default function Page() {
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+console.log('error issssssssssssssssssssssss', error)
 
   return (
     <PublicLayout>
+
       <DetectLanguageBox
         setResult={setResult}
         setError={setError}
         setLoading={setLoading}
+        error={error?error:'null'}
       />
 {result &&
      (  
-     <div className="flex justify-center mt-10">
-     <FlagCard lang={result.language} />  
+     <div className="flex justify-center mt-10 flex-col">
+     <FlagCard lang={result?.language || 'arabic'} code={result?.code || 'EG'} />  
      <TopLanguage data={result} loading={loading} />
      
-     </div>)}
+     </div>)
+     }
 
 
-{error && 
-
+{/* {error && 
       <ErrorCard error={error} />
-}
+} */}
  </PublicLayout>
   );
 }
